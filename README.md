@@ -28,7 +28,7 @@ simulate animation
 Understand how Scriptable objects work <br>
 Reference Video - https://www.youtube.com/watch?v=raQ3iHhE_Kk
 
-How to approach a game:
+How to approach a game using scriptable objects:
 
 - Modular
     - Systems are not directly dependant on each other, example: inventory systems would want to communicate with other systems but we should not hard code/ hard reference the 2 systems, this will cause it to be less flexible to create other new things.
@@ -53,3 +53,40 @@ How to approach a game:
     -  The more editor features you have on the component will make it easier to debug the issue since you don't need to go back to the code to change whatever you wanted to. Make it easier by making sure that you can see the debug state in your editor itself.
     - Do not fix a bug that You Don't Understand <b>(Important)</b> - Go through documentation, youtube videos, etc. or any other references but understand the bug that is being created, why it's there and what it's causing. After understanding it then only fix it.
     
+
+### Simple Use cases
+
+- Game configuration files 
+
+- Inventory
+
+- Enemy Stats
+
+- Audio Collection - Like a different sound when walking on dirt, stone, etc.
+
+- One classic use case you may see is DontDestroyOnLoad, from imported asset packs.
+
+### Singletons
+
+Benefits:
+
+- This can access anything from anywhere. Can write in code that, example: return playermanager.instance.name and thats it, you will get the name.
+
+Drawbacks:
+
+- This can reduce modularity in the game, making it more rigid.
+
+### Creating a simple game of 3 cards where 2 cards match when clicked and 1 doesn't match with anything using scriptable objects.
+
+#### My approach:
+Writing a scriptable object code, basic fields:
+    public string CardName;<br>
+    public string CardDescription;<br>
+    
+    The main controller here will be the bool variable with 2 data fields; X or O. (public bool isX;)
+
+
+
+private variables - add _ before the name
+dont start objects with capitals
+dont name it dicescript, rollscript, etc. just name it dice, roll and so on
