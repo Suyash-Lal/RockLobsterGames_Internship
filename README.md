@@ -6,7 +6,7 @@ Create a 5 minute gameplay video using the 3D Gamekit Lite (https://assetstore.u
 
 <b>Submission:</b> 5 minute gameplay video clip and a Continuous_Notes.md file displaying my progressive work, how I went about it, and if any roadblocks were hit. 
 
-## Assignment 1
+## Assignment
 
 <b>End Goal:</b> Like in God of War, when Kratos gets close to a door, theres a seamless animation between the character and the door opening into a cutscene. We don't want any pauses between this interaction, the cutscene must happen as soon as the player is in a trigger area and when the cutscene ends, the game will go on as normal.
 
@@ -90,3 +90,13 @@ Writing a scriptable object code, basic fields:
 private variables - add _ before the name
 dont start objects with capitals
 dont name it dicescript, rollscript, etc. just name it dice, roll and so on
+
+### Mini Projects
+
+To get more practice and understanding of Unity I was given assignments in the form of small games <br> (the games can be accessed via importing the .unitypackages in the mini projects folder):
+
+<b>Game 1:</b> <u>Dice Car</u> - Make a game where you roll a dice and the car will move along a given set of steps to reach the end.
+
+<b>Game 2:</b> <u>Match the Cards</u> - Just like the arcade games, we click 2 cards and if they match, they disappear. Otherwise if the wrong card is clicked, the match is rejected and the player needs to select again.
+
+<b>Game 3:</b> <u>Snakes and Ladders</u> - This is basically the same as any other snakes and ladders game goes. This game took more time since the new point in this game was to build the game for 3 players instead of just 1. So to control the turn based approach, there was a lot of scripting involved.
