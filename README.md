@@ -1,4 +1,4 @@
-# RockLobster_Internship
+# RockLobsterGames_Internship
 
 ## Entrance assignment
 
@@ -6,7 +6,7 @@ Create a 5 minute gameplay video using the 3D Gamekit Lite (https://assetstore.u
 
 <b>Submission:</b> 5 minute gameplay video clip and a Continuous_Notes.md file displaying my progressive work, how I went about it, and if any roadblocks were hit. 
 
-## Assignment
+## Inital Assignment
 
 <b>End Goal:</b> Like in God of War, when Kratos gets close to a door, theres a seamless animation between the character and the door opening into a cutscene. We don't want any pauses between this interaction, the cutscene must happen as soon as the player is in a trigger area and when the cutscene ends, the game will go on as normal.
 
@@ -76,17 +76,6 @@ Drawbacks:
 
 - This can reduce modularity in the game, making it more rigid.
 
-### Creating a simple game of 3 cards where 2 cards match when clicked and 1 doesn't match with anything using scriptable objects.
-
-#### My approach:
-Writing a scriptable object code, basic fields:
-    public string CardName;<br>
-    public string CardDescription;<br>
-    
-    The main controller here will be the bool variable with 2 data fields; X or O. (public bool isX;)
-
-
-
 private variables - add _ before the name
 dont start objects with capitals
 dont name it dicescript, rollscript, etc. just name it dice, roll and so on
@@ -97,6 +86,32 @@ To get more practice and understanding of Unity I was given assignments in the f
 
 <b>Game 1:</b> <u>Dice Car</u> - Make a game where you roll a dice and the car will move along a given set of steps to reach the end.
 
-<b>Game 2:</b> <u>Match the Cards</u> - Just like the arcade games, we click 2 cards and if they match, they disappear. Otherwise if the wrong card is clicked, the match is rejected and the player needs to select again.
+<b>Game 2:</b> <u>Match the Cards</u> - Creating a simple game of 3 cards where 2 cards match when clicked and 1 doesn't match with anything using scriptable objects.
+
+#### My approach:
+Writing a scriptable object code, basic fields:
+    public string CardName;<br>
+    public string CardDescription;<br>
+    
+    The main controller here will be the bool variable with 2 data fields; X or O. (public bool isX;)
 
 <b>Game 3:</b> <u>Snakes and Ladders</u> - This is basically the same as any other snakes and ladders game goes. This game took more time since the new point in this game was to build the game for 3 players instead of just 1. So to control the turn based approach, there was a lot of scripting involved.
+
+### Asset utilization and learning
+
+#### NaughtyAttributes
+This package enhances Unity's built-in attributes, allowing for the creation of more powerful and flexible inspectors without the need for custom editors or property drawers. Additionally, it offers attributes that can be applied to non-serialized fields or functions, broadening its utility.
+
+For instance, in my SandL_Anim.unitypackage game, I utilized this package to verify movements according to specific dice rolls and switch players directly via the inspector. This significantly simplifies debugging and inspecting specific interactions, enabling quicker and more efficient development.
+
+#### DOTween Package
+
+DOTween is a fast, type-safe object-oriented animation engine for Unity, used to animate anything in Unity, from UI elements to game objects and more. It allows for smooth transitions and complex sequences with minimal code.
+
+In my project, I used DOTween to animate the movement of player objects across a game board (in Snakes and ladders). Players move from one tile to another smoothly, with brief pauses at each tile to enhance the visual effect. When landing on special tiles (like those representing snakes or ladders), the players are animated directly to their new positions, bypassing intermediate tiles. This use of DOTween ensures a fluid and visually appealing gameplay experience.
+
+#### Event System
+
+The event system in Unity is a powerful component that facilitates communication between different parts of a game or application. It allows developers to define custom events and trigger them, enabling a decoupled architecture where objects do not need to directly reference each other to interact. This system enhances modularity and maintainability by allowing objects to subscribe to and react to events without tight coupling.
+
+I have implemented the event system into the SandL_WithEvents unity package to demonstrate how it may be used. From past experience, I used tags to differentiate between objects and set rules on interactions. Now from what I have learnt from the event system, I can trigger and start interactions more seamlessly without the need of hardcoding the interactions. This ensures that the project remains modular and easy to understand when working in groups as well. It also enhances the responsiveness of the game. 
